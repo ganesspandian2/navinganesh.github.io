@@ -118,7 +118,7 @@ function parsePortfolioMarkdown(md) {
       const raw_skill = line.slice(2).trim();
       // Split emoji from the rest — emoji can be multi-codepoint
       // Strategy: grab leading grapheme clusters that are emoji/symbols
-      const match = raw_skill.match(/^([\u{1F300}-\u{1FFFF}\u{2600}-\u{27BF}\u{2300}-\u{23FF}\u{2B00}-\u{2BFF}\u{FE00}-\u{FEFF}☕🐍🗄️⚡🌱🌶️🎸🟢🚂⚛️🧩🏗️📐🤖🧠📋📊☁️📜🐳🔧📦]+\s*)/u;
+      const match = raw_skill.match(/^([\u{1F300}-\u{1FFFF}\u{2600}-\u{27BF}\u{2300}-\u{23FF}\u{2B00}-\u{2BFF}\u{FE00}-\u{FEFF}☕🐍🗄️⚡🌱🌶️🎸🟢🚂⚛️🧩🏗️📐🤖🧠📋📊☁️📜🐳🔧📦]+\s*)/u);
       if (match) {
         const emoji = match[1].trim();
         const name = raw_skill.slice(match[0].length).trim();
