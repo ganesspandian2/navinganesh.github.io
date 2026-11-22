@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Navin Ganesh Pandiyan — Software Engineer II specialising in backend performance, Kafka/ClickHouse pipelines, agentic AI integrations, and AWS cloud architecture." />
+  <meta name="author" content="Navin Ganesh Pandiyan" />
+  <meta property="og:title" content="Navin Ganesh Pandiyan — Software Engineer II" />
+  <meta property="og:description" content="Portfolio of Navin Ganesh Pandiyan: backend performance, high-throughput data pipelines, agentic AI, and AWS cloud." />
+  <meta property="og:type" content="website" />
+  <title>Navin Ganesh Pandiyan — Portfolio</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Inline theme bootstrap (before paint) to avoid FOUC -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var theme = saved === 'light' || saved === 'dark'
+        ? saved
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React 18 production UMD (CDN) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel Standalone (transpiles JSX in-browser) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Markdown parser -->
+  <script src="./parser.js"></script>
+
+  <!-- React app (Babel transpiles JSX) -->
+  <script type="text/babel" src="./app.jsx"></script>
+</body>
+</html>
